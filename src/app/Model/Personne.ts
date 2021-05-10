@@ -1,0 +1,23 @@
+export class Personne {
+    id;
+    name;
+    firstname;
+    age;
+    path; 
+    cin;
+    job;
+    jobdescription;
+    summary;
+  constructor(id=0,name="",firstname="",age=0,path="",cin="",job="",jobdescription="",summary="")
+  {
+    this.id=id;
+    this.name=name;
+    this.firstname=firstname;
+    this.age=age;
+    this.path=path; 
+    this.cin=cin;
+    this.job=job;
+    this.jobdescription=jobdescription;
+    this.summary=summary;
+  }
+}

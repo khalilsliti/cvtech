@@ -1,0 +1,7 @@
+<div class="btn">
+    <p>I am the  anotherparent of anotherchild</p>
+    <app-anotherchild 
+    [childproperty]="parentproperty"
+    (senddatafromanotherchildtoanotherparent)=showmessagefromanotherchild($event.value)></app-anotherchild>
+</div>
+

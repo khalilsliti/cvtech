@@ -1,0 +1,9 @@
+<app-fils [filsProperty]="color"   (sendfromfilstoparent)="getdatafromchild($event.message)"> </app-fils>
+
+
+<div [style.backgroundColor]="color" >
+    the color should change based on the input  the color variable is {{color}}
+</div> 
+<input [(ngModel)]="color" type="text" class="form-control" > 
+<button (click)="showdata()">click here to console log data</button>
+<button class="btn-primary" (click)="gotocv()">Click here to go back to cv </button>

@@ -1,0 +1,28 @@
+<p>Using ngFor with an array</p>
+<ol class="list-group">
+  <li class="list-group-item" *ngFor="let team of teams; 
+  let ind=index; let f=first let e=even" >{{team}} the index of the team in the array is {{ind}} first: {{f}} even: {{e}}</li>
+</ol>
+<p>Using ngFor with an object</p>
+<ol class="list-group">
+  <li class="list-group-item" *ngFor="let oteam of oteams | keyvalue" >{{oteam.key}} : {{oteam.value}}</li>
+</ol>
+<p [ngClass]="
+{   
+    'est':est,
+    'argentine':argentine,
+    'ca':ca
+}
+">
+   The .argentine css file is {{argentine}}
+   The .est css file is {{est}}
+   The .ca css file is {{ca}}
+  </p>
+<button class="btn" [ngClass]="{'argentine':argentine}" (click)=changetoargentine()>Click here to change to argentine color</button>
+<button class="btn"  [ngClass]="{'est':est}"
+(click)=changetoest()>Click here to change to est color</button>
+<button class="btn" [ngClass]="{'ca':ca}"(click)=changetoca()>Click here to change to ca color</button>
+
+<div appHighlight>I'm testing the custom directive i created </div>
+<input  *ngIf="show" type="text" class="form-control" appRainbow>
+<button class="primary-button" (click)="show=!show">Click here to hide the input </button>

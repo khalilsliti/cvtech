@@ -1,0 +1,12 @@
+<p 
+[ngStyle]="{
+'color':tscolor,
+'backgroundColor':tsbgcolor,
+'font-size':size
+}">
+ style works!</p>
+
+ For the text color <input type="text" class="form-control" [(ngModel)]="tscolor"> 
+ For the backgroundColor <input type="text" class="form-control" [(ngModel)]="tsbgcolor"> 
+ To change the text size <input type="number" class="form-control" #inputsize (change)="changetextsize(inputsize.value)"> 
+ To change the text size but you should write the unit (em,px,%) <input type="text" class="form-control" [(ngModel)]="size"> 
