@@ -1,9 +1,15 @@
 <form #formulaire="ngForm">
         
             <label for="email" >Email : </label>
-        <input required id="email" name="email "type="text" email ngModel class="form-control">
+        <input #inputmail="ngModel" required id="email" name="email "type="text" email ngModel class="form-control">
+        <div class="alert alert-danger" [hidden]="inputmail.valid || inputmail.untouched">
+            Vous devez entrer un mail valide
+        </div>
         <label for="email" >password : </label>
-        <input required id="password" name="password "type="password" ngModel class="form-control">
+        <input #inputpass="ngModel" required id="password" minlength="5" name="password "type="password" ngModel class="form-control">
+        <div class="alert alert-danger"  *ngIf="inputpass.invalid && inputpass.touched" >
+            Le mot de passe doit avoir au minimum 5 caractéres
+        </div>
         <br>
         
    
