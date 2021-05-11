@@ -11,5 +11,9 @@ export class AddCvComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  envoyercv(x)
+  {
+    console.log(x)
+  }
 
 }
