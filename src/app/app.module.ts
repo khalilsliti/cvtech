@@ -24,6 +24,9 @@ import { ROUTING } from './app.routing';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { RsimulatorComponent } from './rsimulator/rsimulator.component';
+import { DetailComponent } from './cvTech/detail/detail.component';
+import { AddCvComponent } from './add-cv/add-cv.component';
+import { DeleteCvComponent } from './cvTech/delete-cv/delete-cv.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { RsimulatorComponent } from './rsimulator/rsimulator.component';
     EmbaucheComponent,
     NavbarComponent,
     NotfoundComponent,
-    RsimulatorComponent
+    RsimulatorComponent,
+    DetailComponent,
+    AddCvComponent,
+    DeleteCvComponent
   ],
   imports: [
     BrowserModule,
