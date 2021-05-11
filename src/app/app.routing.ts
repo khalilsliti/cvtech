@@ -11,6 +11,7 @@ import { DetailComponent } from "./cvTech/detail/detail.component";
 import { ClassComponent } from "./directive/class/class.component";
 import { StyleComponent } from "./directive/style/style.component";
 import { FirstchildComponent } from "./firstchild/firstchild.component";
+import { LoginComponent } from "./login/login.component";
 import { NotfoundComponent } from "./notfound/notfound.component";
 import { RsimulatorComponent } from "./rsimulator/rsimulator.component";
 import { SecondchildComponent } from "./secondchild/secondchild.component";
@@ -25,6 +26,7 @@ const APP_ROUTING : Routes = [
         {path:"" , component: CvComponent},
     ]},
     {path:"" , component: CvComponent},
+    {path:"login" , component: LoginComponent},
     {path:"firstchild" , component: FirstchildComponent},
     {path:"secondchild" , component: SecondchildComponent},
     {path:"anotherchild" , component: AnotherchildComponent},

@@ -1,0 +1,17 @@
+<form #formulaire="ngForm">
+        
+            <label for="email" >Email : </label>
+        <input required id="email" name="email "type="text" email ngModel class="form-control">
+        <label for="email" >password : </label>
+        <input required id="password" name="password "type="password" ngModel class="form-control">
+        <br>
+        
+   
+        <div class="col text-center">
+            <button class="btn btn-primary" [disabled]="formulaire.invalid" (click)="showinput(formulaire)">Login</button>
+        </div>
+        
+
+   
+    
+    </form>

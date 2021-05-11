@@ -27,6 +27,7 @@ import { RsimulatorComponent } from './rsimulator/rsimulator.component';
 import { DetailComponent } from './cvTech/detail/detail.component';
 import { AddCvComponent } from './add-cv/add-cv.component';
 import { DeleteCvComponent } from './cvTech/delete-cv/delete-cv.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { DeleteCvComponent } from './cvTech/delete-cv/delete-cv.component';
     RsimulatorComponent,
     DetailComponent,
     AddCvComponent,
-    DeleteCvComponent
+    DeleteCvComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

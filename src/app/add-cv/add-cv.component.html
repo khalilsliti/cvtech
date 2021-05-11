@@ -1,6 +1,6 @@
 <form #formulaire="ngForm">
     <label for="id" >Id :</label>
-    <input id="id"  name="id" type="number"  ngModel class="form-control">
+    <input required id="id"  name="id" type="number"  ngModel class="form-control">
     <label for="name" >Name :</label>
     <input id="name" name="name" type="text"  ngModel class="form-control">
     <label for="firstname" >Firstname :</label>
@@ -21,6 +21,6 @@
     <label for="path" >path:</label>
     <input id="path" name="path" type="text"  ngModel class="form-control">
 
-    <button class="btn btn-primary" (click)="envoyercv(formulaire)">Envoyer</button>
+    <button class="btn btn-primary" (click)="envoyercv(formulaire)" [disabled]="formulaire.invalid">Envoyer</button>
 </form>
 
