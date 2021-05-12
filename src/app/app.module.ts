@@ -28,6 +28,9 @@ import { DetailComponent } from './cvTech/detail/detail.component';
 import { AddCvComponent } from './add-cv/add-cv.component';
 import { DeleteCvComponent } from './cvTech/delete-cv/delete-cv.component';
 import { LoginComponent } from './login/login.component';
+import { ObservableComponent } from './observable/observable.component';
+import { HttpclientComponent } from './httpclient/httpclient.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -54,12 +57,16 @@ import { LoginComponent } from './login/login.component';
     DetailComponent,
     AddCvComponent,
     DeleteCvComponent,
-    LoginComponent
+    LoginComponent,
+    ObservableComponent,
+    HttpclientComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserModule,
+    HttpClientModule,
     ROUTING 
   ],
   providers: [],

@@ -23,6 +23,11 @@ export class CvService {
     const perso=this.personnes.find((perso)=>{return perso.id==id});
     return perso;
   }
+  addpersonne(x)
+  {
+    x.id=this.personnes[this.personnes.length -1].id +1
+    this.personnes.push(x)
+  }
  
  
 }
