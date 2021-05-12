@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
+  visibility=false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+  show()
+  {
+    this.visibility=!this.visibility
   }
 
 }
