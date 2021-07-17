@@ -1,13 +1,11 @@
-FROM node:12.7-alpine AS build
+
+FROM node:10-alpine as build-step
+RUN mkdir -p /app
 WORKDIR /app
-COPY / ./
-COPY package*.json ./
-
-RUN npm install -g @angular/cli@10.0.4 && \
-    npm install && \
-    ng build
-COPY . .
-
+COPY package.json /app
+RUN npm install
+COPY . /app
+RUN npm run build --prod
+# Stage 2
 FROM nginx:1.17.1-alpine
-WORKDIR /app
-COPY --from=build /app/dist/ui /usr/share/nginx/html
+COPY --from=build-step /app/docs /usr/share/nginx/html
