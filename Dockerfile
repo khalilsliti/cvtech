@@ -1,7 +1,13 @@
-FROM node:12
-WORKDIR /App
+FROM node:12.7-alpine AS build
+WORKDIR /app
+COPY / ./
 COPY package*.json ./
-RUN npm install
+
+RUN npm install -g @angular/cli@10.0.4 && \
+    npm install && \
+    ng build
 COPY . .
-EXPOSE 8080
-CMD ["npm","start"]
+
+FROM nginx:1.17.1-alpine
+WORKDIR /app
+COPY --from=build /app/dist/ui /usr/share/nginx/html
